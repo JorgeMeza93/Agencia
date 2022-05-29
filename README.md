@@ -105,4 +105,8 @@ p Te amo Jaqueline
 Pero para trabajar seriamente necesitaremos más que esto así que creamos una carpeta llamada layout y creamos un index.pug
 Después presionando ! Nos genera el DOCTYPE en pug
 
+Pero para trabajar seriamente necesitaremos más que esto así que creamos una carpeta llamada layout y creamos un index.pug
+Después presionando ! Nos genera el DOCTYPE en pug
 
+Ahora creamos una carpeta llamada public ahi estarán todos los archivos omg y css y en el archivo index.js procedemos a agregar el acceso a la carpeta public
+app.use(express.static(“public”));
