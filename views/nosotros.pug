@@ -1,5 +1,8 @@
-<h1>Hola Mundo</h1>
-h1 hola
-p Desde pug
-p Te amo Jaqueline
-p= textoViajes
+extends ./layout/index
+
+block contenido
+    p Desde pug
+    p Te amo Jaqueline
+    p= textoViajes
+
+    img(src="img/cupon.jpg")
