@@ -3,7 +3,7 @@ import express from "express";
 const router = express.Router();
 
 router.get("/", (req, res)=>{
-    res.render("index");
+    res.render("layout/index");
 });
 router.get("/nosotros", (req, res)=> {
     const viajes = "Viajes a Brasil";
