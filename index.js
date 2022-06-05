@@ -8,6 +8,7 @@ db.authenticate()
   .then( () => console.log("Base de datos conectada"))
   .catch( error => console.log(error))
 const port = process.env.PORT || 4000;
+
 //Habilitar Pug
 app.set("view engine", "pug");
 
@@ -18,8 +19,12 @@ app.use( (req, res, next) =>{
   return next();
 });
 
+//Agregar body parser para leer los datos del formulario
+app.use(express.urlencoded( {extended: true} ));
+
 // Definir la carpeta pública
 app.use(express.static("public"));
+
 app.use("/", router);
 
 app.listen(port, () =>
