@@ -8,12 +8,16 @@ const guardarTestimonial = async (req, res) => {
         error.push( { mensaje: "Todos los campos son obligatorios"} )
     }
     if(error.length > 0){
+        //Consultar Testimoniales Existentes
+        const testimoniales = await testimonial.findAll();
+
         res.render("layout/testimoniales", {
             pagina: "Testimoniales",
             error: error,
             nombre,
             correo,
-            mensaje
+            mensaje,
+            testimoniales
         })
     }
     else{
