@@ -7,5 +7,29 @@ block slider
 
 block contenido
     main.container.mt-5
-        .row
-            h1 #{pagina}
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5
+            .col-md-6
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae asperiores deleniti at. Consectetur at, rerum voluptatem repellendus porro est facere illum dolores, quos labore, quod omnis 
+                    |eveniet accusantium optio odit.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae asperiores deleniti at. Consectetur at, rerum voluptatem repellendus porro est facere illum dolores, quos labore, quod omnis 
+                    |eveniet accusantium optio odit.
+                    |Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam iusto quidem laboriosam. Cum adipisci quas molestias. Nam minus nostrum in libero placeat dignissimos eligendi maxime quam quaerat!
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg" alt="imagen nosotros" class="img-fluid")
+        
+        include ./bloques-viajes
+
+    .descuento
+        .container
+            .row
+                .col-md-6
+                    .contenido
+                        h3 5% de Descuento
+                        p.titulo Viaje a Canadá
+                        p.fecha 20 de Marzo del 2023 - 28 Marzo del 2023
+                        p.precio $2500 USD
+
+    .container
+        h2.mt-5.text-center Testimoniales
+        include ./bloque-testimoniales
