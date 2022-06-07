@@ -4,7 +4,8 @@
   "description": "\"Proyecto de una agencia de viajes utilizando HTML, SASS, JavaScript y ExpressJS\"",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "sequelize": "^6.20.1"
   },
   "devDependencies": {
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.16"
   },
   "type": "module"

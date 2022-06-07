@@ -1,6 +1,9 @@
 import express from 'express';
 import router from "./routes/index.js";
 import db from "./config/db.js";
+import dotenv from "dotenv";
+
+dotenv.config({ path:"variables.env"})
 
 const app = express();
 //Conectar a base de datos
@@ -27,6 +30,9 @@ app.use(express.static("public"));
 
 app.use("/", router);
 
-app.listen(port, () =>
+/* Puerto y host para la app */
+const host = process.env.HOST || "0.0.0.0"
+
+app.listen(port, host,() =>
   console.log(`El servidor está funcionando en el puerto ${port}`),
 );
